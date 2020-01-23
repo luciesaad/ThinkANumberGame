@@ -19,7 +19,7 @@ public class Main {
             if (isNextInt) {
                 guess = scan.nextInt();
             }
-            scan.next();
+
             logic.gameResult(guess);
             for (int i = 0; i < logic.getArrayList().size(); i++) {
                 if (logic.getArrayList().get(i).equals(guess)) {
