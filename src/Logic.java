@@ -8,8 +8,7 @@ public class Logic {
     private int upLimit = 50;
     private int lowLimit = 0;
     private int guess;
-
-
+    private  Random randomGen = new Random();
     private ArrayList<Integer> arrayList = new ArrayList<>();
 
 
@@ -53,12 +52,10 @@ public class Logic {
     }
 
     public int randomStartNum(){
-        Random randomGen = new Random();
         return winNum = randomGen.nextInt(51);
     }
 
     public void startNumbArray(){
-        Random randomGen = new Random();
         int randomStart = randomGen.nextInt(51);
         if (randomStart != winNum) {
             arrayList.add(randomStart);
@@ -66,7 +63,6 @@ public class Logic {
     }
 
     public void genArrayList() {
-        Random randomGen = new Random();
         int count = 0;
         while (count < 9) {
             int randomInt = randomGen.nextInt(51);

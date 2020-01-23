@@ -20,10 +20,7 @@ public class Main {
                 guess = scan.nextInt();
             }
             scan.next();
-
-
             logic.gameResult(guess);
-
             for (int i = 0; i < logic.getArrayList().size(); i++) {
                 if (logic.getArrayList().get(i).equals(guess)) {
                     System.out.println("You hit a mine");
@@ -31,15 +28,11 @@ public class Main {
                     break;
                 }
             }
-            
             if(logic.isWinner(guess)){
                 break;
             }
             count++;
-
         } while (count < 10);
         scan.close();
-
-
     }
 }
