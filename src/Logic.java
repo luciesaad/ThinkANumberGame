@@ -7,7 +7,6 @@ public class Logic {
     private int winNum;
     private int upLimit = 50;
     private int lowLimit = 0;
-    private int guess;
     private  Random randomGen = new Random();
     private ArrayList<Integer> arrayList = new ArrayList<>();
 

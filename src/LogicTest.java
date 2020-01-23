@@ -36,7 +36,23 @@ public class LogicTest {
         assertEquals("You won!", logic.isWinner(testNum));
     }
 
-     @Test
+    @Test
+    public void gameResult(){
+        assertEquals("system broke!", "You don't get to play anymore!", logic.gameResult(10));
+    }
+
+    @Test
+    public void randomStartNum(){
+      assertTrue("Number out of range", logic.randomStartNum() >= 0 && logic.randomStartNum() <= 50);
+    }
+
+    @Test
+    public void startNumbArray(){
+        logic.startNumbArray();
+       assertNotNull("Array is null", logic.getArrayList().get(0));
+    }
+
+    @Test
     public void genArrayList(){
         assertFalse(logic.getArrayList().size() > 0 );
     }
