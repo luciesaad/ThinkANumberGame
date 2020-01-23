@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Logic {
 
-    private int winNum = 27;
+    private int winNum;
     private int upLimit = 50;
     private int lowLimit = 0;
     private int guess;
@@ -20,25 +20,41 @@ public class Logic {
         return false;
     }
 
-    public String lower(int guess) {
+    public boolean lower(int guess) {
         if (guess < winNum) {
-            return "too low";
+            return true;
         }
-        return "";
+        return false;
     }
 
-    public String higher(int guess) {
+    public boolean higher(int guess) {
         if (guess > winNum) {
-            return "too high";
+            return true;
         }
-        return "";
+        return false;
     }
 
-    public String isWinner(int guess) { //this one call first
+    public boolean isWinner(int guess) { //this one call first
         if (guess == winNum) {
-            return "You won!";
+            return true;
         }
-        return "";
+        return false;
+    }
+
+    public String gameResult(int guess){
+        if(isWinner(guess)){
+           System.out.println("You won!");
+        }else if(lower(guess)){
+            System.out.println("Too low!");
+        }else if(higher(guess)){
+            System.out.println("Too high!");
+        }
+        return "You don't get to play anymore!";
+    }
+
+    public int randomStartNum(){
+        Random randomGen = new Random();
+        return winNum = randomGen.nextInt(51);
     }
 
     public void startNumbArray(){
