@@ -41,19 +41,23 @@ public class Logic {
         return "";
     }
 
-
-    public void genArrayList() {
+    public void startNumbArray(){
         Random randomGen = new Random();
-        int count = 0;
         int randomStart = randomGen.nextInt(51);
         if (randomStart != winNum) {
             arrayList.add(randomStart);
         }
+    }
+
+    public void genArrayList() {
+        Random randomGen = new Random();
+        int count = 0;
         while (count < 9) {
             int randomInt = randomGen.nextInt(51);
             for (int i = 0; i <= arrayList.size(); i++) {
                 if (!arrayList.get(i).equals(randomInt) && randomInt != winNum) {
                     arrayList.add(randomInt);
+                    break;
                 }
             }
             count++;

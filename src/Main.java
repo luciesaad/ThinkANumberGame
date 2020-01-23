@@ -9,6 +9,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);
 
         int count = 0;
+        logic.startNumbArray();
         logic.genArrayList();
         do{
             System.out.println("Write in number between 0 and 50: ");
