@@ -38,7 +38,7 @@ public class LogicTest {
 
      @Test
     public void genArrayList(){
-        assertTrue(logic.getArrayList().size() > 0 );
+        assertFalse(logic.getArrayList().size() > 0 );
     }
 
     @Test
@@ -54,7 +54,7 @@ public class LogicTest {
         assertEquals(0, logic.getLowLimit());
     }
     @Test
-    public void getArrayList(){assertTrue(logic.getArrayList().size() > 0 );}
+    public void getArrayList(){assertFalse(logic.getArrayList().size() > 0 );}
 
 
 }

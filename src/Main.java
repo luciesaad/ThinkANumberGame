@@ -9,7 +9,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);
 
         int count = 0;
-         logic.genArrayList();
+        logic.genArrayList();
         do{
             System.out.println("Write in number between 0 and 50: ");
             guess = scan.nextInt();
@@ -29,7 +29,8 @@ public class Main {
             if(logic.isWinner((guess)).equals("You won!")){
                 break;
             }
-            System.out.print(logic.getArrayList());
+            //TA BORT!!!!
+            System.out.println(logic.getArrayList());
             count++;
 
         }while(count < 10);
