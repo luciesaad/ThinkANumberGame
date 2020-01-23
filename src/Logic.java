@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Logic {
@@ -6,6 +8,9 @@ public class Logic {
     private int upLimit = 50;
     private int lowLimit = 0;
     private int guess;
+
+
+    private ArrayList<Integer> arrayList = new ArrayList<>();
 
 
     public boolean isInRange(int guess) {
@@ -36,6 +41,23 @@ public class Logic {
         return "";
     }
 
+
+    public ArrayList genArrayList(){
+
+        Random randomGen = new Random();
+
+        int count = 0;
+        while(count < 10){
+            int randomInt = randomGen.nextInt(51);
+            arrayList.add(randomInt);
+            count ++;
+        }
+
+
+        return  arrayList;
+    }
+
+
     public int getWinNum() {  //getter do we need this?
         return winNum;
     }
@@ -47,5 +69,10 @@ public class Logic {
     public int getLowLimit() {
         return lowLimit;
     }
+
+    public ArrayList<Integer> getArrayList() {
+        return arrayList;
+    }
+
 }
 

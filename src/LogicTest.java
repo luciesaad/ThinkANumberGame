@@ -36,6 +36,11 @@ public class LogicTest {
         assertEquals("You won!", logic.isWinner(testNum));
     }
 
+     @Test
+    public void genArrayList(){
+        assertTrue(logic.getArrayList().size() > 0 );
+    }
+
     @Test
     public void getWinNum() {
         assertEquals(27, logic.getWinNum());
@@ -48,6 +53,8 @@ public class LogicTest {
     public void getLowLimit() {
         assertEquals(0, logic.getLowLimit());
     }
+    @Test
+    public void getArrayList(){assertTrue(logic.getArrayList().size() > 0 );}
 
 
 }
